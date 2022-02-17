@@ -40,7 +40,7 @@ jobs:
     - name: Coverage Report
       uses: 5monkeys/cobertura-action@master
       with:
-        path: coverage/coverage.xml
+        path: reports/cov/coverage.xml
         repo_token: ${{ secrets.GITHUB_TOKEN }}
         minimum_coverage: 100
         fail_below_threshold: true
