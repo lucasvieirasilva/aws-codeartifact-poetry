@@ -1,0 +1,22 @@
+loaders:
+  - type: python
+
+renderer:
+  type: mkdocs
+  mkdocs_config:
+    site_name: Databricks AWS Utils
+    theme: readthedocs
+  output_directory: docs/build
+  pages:
+    - title: Home
+      name: index
+      source: docs/HOME.md
+    - title: Changelog
+      name: changelog
+      source: CHANGELOG.md
+    - title: Contributing
+      name: contributing
+      source: CONTRIBUTING.md
+    - title: CLI Documentation
+      name: cli
+      source: docs/CLI.md

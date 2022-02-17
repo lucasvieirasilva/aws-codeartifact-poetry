@@ -1,0 +1,64 @@
+[tool.poetry]
+name = "aws-codeartifact-poetry"
+version = "1.0.0"
+description = "AWS CodeArtifact Poetry CLI"
+license = "Proprietary"
+authors = [ "Lucas Vieira <lucas.vieira94@outlook.com>" ]
+maintainers = [ "Lucas Vieira <lucas.vieira94@outlook.com>" ]
+readme = "README.md"
+repository = "https://github.com/lucasvieirasilva/aws-codeartifact-poetry"
+
+  [[tool.poetry.packages]]
+  include = "aws_codeartifact_poetry"
+
+  [tool.poetry.scripts]
+  aws-codeartifact-poetry = "aws_codeartifact_poetry.cli:cli"
+
+  [tool.poetry.dependencies]
+  python = ">=3.8,<3.10"
+  boto3 = "1.20.5"
+  click = "^8.0.3"
+
+  [tool.poetry.dev-dependencies]
+  flake8 = "4.0.1"
+  flake8-isort = "4.1.1"
+  flake8-print = "4.0.0"
+  flake8-pytest-style = "1.5.1"
+  flake8-docstrings = "1.6.0"
+  flake8-type-checking = "1.1.1"
+  pytest = "6.2.4"
+  pytest-html = "3.1.1"
+  pytest-cov = "2.11.1"
+  pytest-sugar = "0.9.4"
+  pyfakefs = "4.4.0"
+  autopep8 = "1.5.7"
+  moto = "2.0.4"
+  pydoc-markdown = "4.3.2"
+  tomli = "1.2.2"
+  tox = "3.23.1"
+
+[build-system]
+requires = [ "poetry-core==1.0.3" ]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 120
+src_paths = ["aws_codeartifact_poetry"]
+py_version = 37
+skip_gitignore = true
+
+[tool.coverage.run]
+branch = true
+source = [ "aws_codeartifact_poetry" ]
+
+[tool.coverage.report]
+exclude_lines = [ ]
+show_missing = true
+
+[tool.pytest.ini_options]
+addopts = "--cov --cov-report html:'./reports/cov/html' --cov-report xml:'./reports/cov/coverage.xml' --junitxml='./reports/junit.xml' --html='./reports/unittests/index.html'"
