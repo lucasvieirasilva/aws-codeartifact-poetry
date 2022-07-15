@@ -14,8 +14,7 @@ def test_session_default(mock_sts):
     """Should return the default boto3 object."""
     result = session.get_session()
 
-    assert boto3 == result
-    assert type(result) is not boto3.Session
+    assert type(result) is boto3.Session
 
 
 @patch("aws_codeartifact_poetry.aws.session.boto3")
@@ -30,8 +29,7 @@ def test_session_with_role_without_context(mock_sts):
     """Should return the default boto3 object."""
     result = session.get_session(role=IAM_ROLE)
 
-    assert boto3 == result
-    assert type(result) is not boto3.Session
+    assert type(result) is boto3.Session
 
 
 def test_session_with_role_and_context(mock_sts):

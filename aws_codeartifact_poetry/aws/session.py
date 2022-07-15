@@ -36,4 +36,4 @@ def get_session(region="us-east-1", profile=None, role=None, context=None):
             aws_session_token=credentials['SessionToken']
         )
 
-    return boto3
+    return boto3.Session(region_name=region)

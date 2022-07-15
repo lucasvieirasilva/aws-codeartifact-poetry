@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-codeartifact-poetry"
-version = "1.0.1"
+version = "1.0.2"
 description = "AWS CodeArtifact Poetry CLI"
 license = "Proprietary"
 authors = [ "Lucas Vieira <lucas.vieira94@outlook.com>" ]
