@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aws-codeartifact-poetry"
-version = "1.0.2"
+version = "1.1.0"
 description = "AWS CodeArtifact Poetry CLI"
 license = "Proprietary"
 authors = [ "Lucas Vieira <lucas.vieira94@outlook.com>" ]
@@ -15,7 +15,7 @@ repository = "https://github.com/lucasvieirasilva/aws-codeartifact-poetry"
   aws-codeartifact-poetry = "aws_codeartifact_poetry.cli:cli"
 
   [tool.poetry.dependencies]
-  python = ">=3.8,<3.10"
+  python = ">=3.8,<=3.10"
   boto3 = "1.20.5"
   click = "^8.0.3"
   toml = "^0.10.2"
@@ -39,7 +39,7 @@ repository = "https://github.com/lucasvieirasilva/aws-codeartifact-poetry"
   tox = "3.23.1"
 
 [build-system]
-requires = [ "poetry-core==1.0.3" ]
+requires = [ "poetry-core==1.1.0" ]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
