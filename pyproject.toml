@@ -15,7 +15,7 @@ repository = "https://github.com/lucasvieirasilva/aws-codeartifact-poetry"
   aws-codeartifact-poetry = "aws_codeartifact_poetry.cli:cli"
 
   [tool.poetry.dependencies]
-  python = ">=3.8,<=3.10"
+  python = ">=3.8,<3.12"
   boto3 = "1.20.5"
   click = "^8.0.3"
   toml = "^0.10.2"
