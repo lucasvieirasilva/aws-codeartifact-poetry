@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [1.2.0] - 2023-02-13
+
+### Changed
+
+- Update project to support python 3.11. [#3z](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/issues/3)
+
 ## [1.1.0] - 2023-01-30
 
 ### Changed
