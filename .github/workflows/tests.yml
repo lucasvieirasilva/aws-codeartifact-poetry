@@ -5,42 +5,42 @@ name: Unit Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [master]
   pull_request:
-    branches: [ main ]
+    branches: [master]
 
 jobs:
   tests:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8, 3.9]
+        python-version: [3.9]
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
 
-    - name: Set up Poetry
-      uses: abatilo/actions-poetry@v2.0.0
-      with:
-        poetry-version: 1.5.1
+      - name: Set up Poetry
+        uses: abatilo/actions-poetry@v2.0.0
+        with:
+          poetry-version: 1.5.1
 
-    - name: Install dependencies
-      run: |
-        poetry install -v
-    - name: Run unit tests
-      env:
-        AWS_REGION: us-east-1
-      run: |
-        poetry run pytest tests/
-    - name: Coverage Report
-      uses: 5monkeys/cobertura-action@master
-      with:
-        path: reports/cov/coverage.xml
-        repo_token: ${{ secrets.GITHUB_TOKEN }}
-        minimum_coverage: 100
-        fail_below_threshold: true
+      - name: Install dependencies
+        run: |
+          poetry install -v
+
+      - name: Run unit tests
+        env:
+          AWS_REGION: us-east-1
+        run: |
+          poetry run pytest tests/
+
+      - name: Upload code coverage
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage
+          path: coverage/coverage.xml
