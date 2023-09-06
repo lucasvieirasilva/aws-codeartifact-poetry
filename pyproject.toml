@@ -58,6 +58,7 @@ skip_gitignore = true
 [tool.coverage.run]
 branch = true
 source = [ "aws_codeartifact_poetry" ]
+relative_files = true
 
 [tool.coverage.report]
 exclude_lines = [ ]
