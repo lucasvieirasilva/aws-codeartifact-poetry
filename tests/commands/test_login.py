@@ -4,12 +4,11 @@ from unittest.mock import ANY, MagicMock, patch
 
 import boto3
 from click.testing import CliRunner
-from moto.core.models import ACCOUNT_ID
 
 from aws_codeartifact_poetry.cli import cli
 
 DOMAIN = 'fake-domain'
-DOMAIN_OWNER = ACCOUNT_ID
+DOMAIN_OWNER = '123456789011'
 REPO = 'fake-repo'
 
 
