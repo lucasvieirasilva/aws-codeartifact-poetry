@@ -2,9 +2,7 @@
 
 ## Requirements
 
-- [poetry](https://pypi.org/project/poetry/1.2.0a2/)
-  > Please install poetry version `1.2.0a2`
-- [mkdocs](https://pypi.org/project/mkdocs/1.2.3/)
+- [poetry](https://pypi.org/project/poetry/)
 
 ## Contributing Code
 
@@ -43,11 +41,7 @@ poetry run pytest
 poetry run flake8
 ```
 
-### Serve documentation
-
-```shell
-pydoc-markdown --server --open
-```
+### Pre-commit
 
 As a pre-deployment step we syntatically validate files with
 [pre-commit](https://pre-commit.com).

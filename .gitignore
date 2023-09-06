@@ -53,3 +53,7 @@ _build
 
 reports/
 __pycache__
+
+# Coverage
+coverage/
+.coverage
