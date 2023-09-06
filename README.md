@@ -15,21 +15,53 @@
 
 AWS CodeArtifact Poetry CLI is a CLI designed to perform Poetry login with AWS CodeArtifact Private PyPi.
 
+## Motivation
+
+AWS CodeArtifact is a fully managed artifact repository service that makes it easy for organizations of any size to securely store, publish, and share software packages used in their development process. CodeArtifact supports npm, Maven, and Python packaging formats and allows you to easily integrate with your existing build and deployment workflows.
+
+However, the AWS CLI does not support Poetry login with AWS CodeArtifact Private PyPi. This CLI was created to solve this problem.
+
 ## Install
 
 `pip install aws-codeartifact-poetry`
 
-## Documentation
+## Usage
 
-- See our [Documentation](https://aws-codeartifact-poetry.readthedocs.io/)
+```text
+Usage: aws-codeartifact-poetry [OPTIONS] COMMAND [ARGS]...
+
+  AWS CodeArtifact Poetry CLI.
+
+Options:
+  --loglevel [DEBUG|INFO|WARNING|ERROR|CRITICAL]
+                                  Log level.  [default: WARNING]
+  --log-file TEXT                 Log file name
+  --help                          Show this message and exit.
+
+Commands:
+  login  Login to AWS CodeArtifact
+```
+
+### Login
+
+```text
+Usage: aws-codeartifact-poetry login [OPTIONS]
+
+  Login to AWS CodeArtifact
+
+Options:
+  --repository TEXT    Your CodeArtifact repository name  [required]
+  --domain TEXT        Your CodeArtifact domain name  [required]
+  --domain-owner TEXT  The AWS account ID that owns your CodeArtifact domain
+                       [required]
+  --profile TEXT       AWS Profile.
+  --region TEXT        AWS Region name  [default: us-east-1]
+  --help               Show this message and exit.
+```
 
 ## Contributing
 
 - See our [Contributing Guide](CONTRIBUTING.md)
-
-## CLI Documentation
-
-- See our [CLI Documentation](docs/CLI.md)
 
 ## Change Log
 
