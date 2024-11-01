@@ -1,10 +1,20 @@
 # CHANGELOG
 
 
+## v1.5.0 (2024-11-01)
+
+### Features
+
+* feat: add support for > 3.8.1 and <4 (#10) ([`ab0163f`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/ab0163f2499ab246b32cacb2442565f0d6e415a5))
+
 
 ## v1.4.0 (2023-09-06)
 
-### Ci
+### Chores
+
+* chore(release): 1.4.0 [skip ci] ([`97c83b4`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/97c83b416a78dd98b9af432a3b1c8c22f2f80ac2))
+
+### Continuous Integration
 
 * ci: add semantic release and upgrade dev dependencies (#7)
 
@@ -18,14 +28,14 @@
 
 * ci: add sonarcloud workflow ([`d421046`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/d421046d2d6f56b79f7e32660f82f555c1a7a355))
 
-### Feature
+### Features
 
 * feat: remove readthedocs and update readme usage guide (#8) ([`bd31cbf`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/bd31cbfe696583255acb7e57bcf69ecee169eb5e))
 
 
 ## v1.3.0 (2023-05-30)
 
-### Ci
+### Continuous Integration
 
 * ci(github-actions): update python version ([`7a69bb5`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/7a69bb5fc2ff9831a6f49926d5e30f196523a5b5))
 
@@ -67,14 +77,14 @@
 * Fix boto3 session ([`05d7a5f`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/05d7a5fc898f65946fc153600bcc0561f7785e4e))
 
 
-## v1.0.1 (2022-02-18)
+## v1.0.1 (2022-02-17)
 
 ### Unknown
 
 * Add `toml` module to the dependencies. ([`ad224f8`](https://github.com/lucasvieirasilva/aws-codeartifact-poetry/commit/ad224f8e403373bc6336d362ce11ba84c2bad616))
 
 
-## v1.0.0 (2022-02-18)
+## v1.0.0 (2022-02-17)
 
 ### Unknown
 
